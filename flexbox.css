@@ -18,14 +18,15 @@ body {
 	background: #212d40;
 	display: flex; /*Al usar flex, habilitamos flexbox*/
 	flex-direction:row;
-	flex-wrap:wrap; 
-	
-	
-	
+	flex-wrap:wrap; 	
 	justify-content:space-between;
-	align-content: space-around;	
+	align-items: start;	
+
+
 
 	/*
+					align-content
+
 	align-content: flex-start;Te alinea el contenido en el
 	comienzo de la caja principal.
 	align-content: flex-end; Te alinea el contenido hasta
@@ -43,6 +44,9 @@ body {
 
 
 	/*
+					align-items
+
+
 	align-items:flex-end; alinea los items al final de la caja verticalmente
 	align-items:flex-star; alinea los items al inicio de la caja verticalmente
 	align-items:center; alinea los items al centro de la caja verticalmente
@@ -53,7 +57,10 @@ body {
 	*/
 	
 
-	/*justify-content:space-around;Es como el between
+	/*
+			justify-content
+
+	justify-content:space-around;Es como el between
 	pero con un espacio al principio y al final, como
 	un padding
 	justify-content:space-between;Te separa las cajas
@@ -73,7 +80,10 @@ body {
 	Es una forma de escribir menos código
 	*/
 
-	/*flex-wrap:wrap-reverse;Las cajas salen del mismo tamaño
+	/*
+					flex-wrap
+
+	flex-wrap:wrap-reverse;Las cajas salen del mismo tamaño
 	, si no caben, las pone abajo, el reverse, hace que la numeración
 	vaya al reves*
 	flex-wrap: wrap;Hace que las cajas midan lo mismo, solo que si no caben,
@@ -97,4 +107,53 @@ body {
 	padding: 20px;
 	font-size: 40px;
 	color: #fff;
+	flex:1 1 auto;/*resume shrink, frow y basis en una linea
+	LO NORMAL ES ASÍ, significa que tendrá proporción de 1
+	para crecer, 1 para hacerse mas pequeño y auto para un 
+	tamaño automatico
+	Todos crecen, todos se hacen mas grandes y mas chicos
+	por igual
+	PONLO ASÍ POR DEFECTO TE FUNCIONARA*/
+	
 }
+
+
+/*
+.dos {
+	order:2; Cambia el orden de tus cajas como
+	tu quieras
+}
+*/
+
+.dos {
+	align-self:stretch;
+	height: auto;
+}
+
+
+/*
+				align-self
+ Posiciona un elemento diferente
+align-self:flex-start; posiciona un elemento hasta arriba
+align-self:flex-end; posiciona un elemento hasta abajo
+align-self:center; posiciona un elemento al centro
+align-self:stretch; abarca todo el ancho de la caja padre
+
+
+ */
+
+
+
+/*
+.dos {
+	flex-shrink:0;Define cuanto se puede hacer
+	mas grande un elemento en proporcion a los demás
+	LO NORMAL ES PONERLE 0 , no puede hacerse mas chico
+	de lo que tu le digas
+	flex-grow:2;Quiere decir que la caja va a crecer
+	2px cada que la otra caja suba 1px, no significa que
+	sera del doble de tamaño 
+	flex-basis:200px;
+
+	
+} */
