@@ -14,8 +14,7 @@ body {
 }
 
 .contenedor { /*Contenedor PADRE de todo*/
-	/*margin: auto;*/
-	margin: 20px;
+	margin: auto; /*centra todo tu diseño en la página*/
 	width: 90%;
 	max-width: 1000px;
 	display: flex; /*Mandamos llamar a flexbox*/
@@ -88,4 +87,26 @@ aside .ad { /*aside es PADRE y .ad es HIJO*/
 	background: #4264a2;
 	/*margin-bottom: 20px;*/
 	
+}
+
+footer {
+	margin: 20px 0;
+	background: rgba(255,255,255,.2);/*color blanco*/
+	padding: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;/*Hace que ponga los links y el texto a la misma altura*/
+	justify-content:space-between;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 20px; /*El margen se lo pusimos a la izquierda por que después lo pasaremos a la derecha con flexbox*/
+}
+
+footer .redes-sociales a:hover {
+	text-decoration: none;
 }
