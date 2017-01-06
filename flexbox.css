@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+   }
+
+body {
+	background: #f2f2f2;
+	font-family: Arial;
+}
+
+.contendor {
+	width: 80%;
+	max-width: 700px;
+	height: 500px;
+	background: #212d40;
+	display: flex; /*Al usar flex, habilitamos flexbox*/
+	flex-direction:row;
+	flex-wrap:wrap; 
+	
+	
+	
+	justify-content:space-between;
+	align-content: space-around;	
+
+	/*
+	align-content: flex-start;Te alinea el contenido en el
+	comienzo de la caja principal.
+	align-content: flex-end; Te alinea el contenido hasta
+	el final de la caja principal.
+	align-content: center; centra todas tus cajas en el
+	centro de la caja principal
+	align-content:space-between; alinean las cajas arriba
+	y abajo ya que siempre al usar el between se ponen
+	las cajas a los extremos.
+	align-content:space-around; lo mismo que el between
+	pero dejando un espaciado como si fuera un padding
+	aparte del padding que ya se tiene, pero esta solo funciona, cuando hay
+	mas de una linea
+	*/
+
+
+	/*
+	align-items:flex-end; alinea los items al final de la caja verticalmente
+	align-items:flex-star; alinea los items al inicio de la caja verticalmente
+	align-items:center; alinea los items al centro de la caja verticalmente
+	align-items:stretch; hace que las cajas crezcan hasta el tamaño de la caja principal
+	pero si respeta el padding que se le da
+	align-items:baseline; Te alinea todo dependiendo del
+	tamaño de la fuente
+	*/
+	
+
+	/*justify-content:space-around;Es como el between
+	pero con un espacio al principio y al final, como
+	un padding
+	justify-content:space-between;Te separa las cajas
+	hacia los extremos
+	justify-content:center;Centra tus cajas dentro
+	de la caja principal
+	justify-content:flex-end;arrastra tus cajas al
+	final de tu caja principal*/
+
+
+	/*flex-flow:row wrap; es la combinacion de 
+	flex-direction:row;
+	flex-wrap:no-wrap; Las cajas dentro de la caja principal
+	se adaptan al tamaño de la caja principal, osea que ellas
+	cambian su tamaño para adaptarse al espacio que hay.
+	
+	Es una forma de escribir menos código
+	*/
+
+	/*flex-wrap:wrap-reverse;Las cajas salen del mismo tamaño
+	, si no caben, las pone abajo, el reverse, hace que la numeración
+	vaya al reves*
+	flex-wrap: wrap;Hace que las cajas midan lo mismo, solo que si no caben,
+	las empuja hacia abajo*/
+	
+
+	/*flex-direction:row; viene por defecto cuando usas display:flex;
+	flex-direction:row-reverse; Los bloques se posicionan
+	hacia la derecha
+	flex-direction: column; Te las pone en columna de arriba a abajo
+	flex-direction: column-reverse; Las cajas te las pone de arriba a abajo pero la numeración de 
+	tus cajas es inversa, 4, 3,2,1*/
+}
+
+.caja {
+	width: 100px;
+	height: 100px;
+	background: #f79256;
+	text-align: center;
+	margin: 20px;
+	padding: 20px;
+	font-size: 40px;
+	color: #fff;
+}
